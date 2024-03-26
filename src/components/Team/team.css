@@ -1,0 +1,12 @@
+.memberContainer:hover .avater {
+  opacity: 1;
+  scale: 1.1;
+  transition: scale 0.2s ease-in-out;
+}
+
+.avater {
+  opacity: 0;
+  scale: 1;
+  user-select: none;
+  pointer-events: none;
+}

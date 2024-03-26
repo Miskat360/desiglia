@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Machina;
+    src: url(./assets/fonts/PPNeueMachina-PlainRegular.otf);
+}
+body[theme="black"]{
+    background-color: #000;
+    color: #fff;
+}
+body[theme="cyan"]{
+    background-color: #AEDEE0;
+}
+body[theme="salmon"]{
+    background-color: #ef9d90;
+}
+body[theme="white"]{
+    background-color: #fff;
+}
+body[theme="yellow"]{
+    background-color: #f8f4ab;
+}
+body{
+    transition: background-color .5s ease-out;
+}

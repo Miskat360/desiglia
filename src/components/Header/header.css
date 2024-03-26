@@ -1,0 +1,8 @@
+.roundArrowBtn:hover .topArrow{
+    top:11%;
+    transition: all .8s ease-in;
+}
+.roundArrowBtn:hover .bottomArrow{
+    top: 100%;
+    transition: all .8s ease-in;
+}
