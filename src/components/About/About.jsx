@@ -241,7 +241,7 @@ const About = () => {
   ];
   return (
     <>
-      <div data-bgColor="cyan" className="section w-full flex px-10 py-[20vh] items-start relative">
+      <div data-bgcolor="cyan" className="section w-full flex px-10 py-[20vh] items-start relative">
         <div className="basis-1/2 sticky top-20 left-0">
           <p className="aboutPara w-[37vw] font-medium">
             {"Significo is a leading health software creator founded on the belief that technology can transform healthcare to put people first. Whether they are employees, members, customers, or clients, we never forget the real people we're designing for."

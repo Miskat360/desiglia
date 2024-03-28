@@ -188,7 +188,7 @@ const Header = () => {
             className="w-full h-full overflow-hidden z-[3] absolute top-0"
             style={{ clipPath: "circle(75% at 50% 50%)" }}
           >
-            <video src="https://xgjzloifyvgpbmyonaya.supabase.co/storage/v1/object/public/files/bBj1XfrSyi/1ENIoa5sjq"></video>
+            <video autoPlay loop muted src="https://xgjzloifyvgpbmyonaya.supabase.co/storage/v1/object/public/files/bBj1XfrSyi/1ENIoa5sjq"></video>
           </div>
           <div className="text-center flex items-center justify-center">
             <p className="headerPeraAnim w-[25vw] text-2xl text-zinc-200 pt-20 leading-[1.5] font-semibold">

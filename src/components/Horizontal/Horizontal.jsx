@@ -20,7 +20,16 @@ const Horizontal = () => {
           pin: true,
         },
       });
-
+      gsap.to(".opacityAnim", {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: "#opacityAnimTrigger",
+          markers: false,
+          start: "100%+=1000px top",
+          scrub: 1,
+          // end: "100%+=1000px top"
+        },
+      });
       window.addEventListener("mousemove", (e) => {
         gsap.set(horizontalCursor.current, {
           xPercent: -50,
@@ -42,16 +51,16 @@ const Horizontal = () => {
         onMouseEnter={() => {
           horizontalCursor.current.style.display = "block";
         }}
-        onMouseLeave={()=>{
-          horizontalCursor.current.style.display = "none"
+        onMouseLeave={() => {
+          horizontalCursor.current.style.display = "none";
         }}
         id="horizontalContainer"
-        className="w-0 bg-[#ef9d90] relative cursor-none"
+        className="w-0 relative cursor-none"
       >
-        <div id="horizontalElem" className="w-[400vw] h-screen">
+        <div id="horizontalElem" className="w-[400vw] h-screen font-[Machina]">
           <div className="whitespace-nowrap w-full h-full">
             <div className="whitespace-normal w-full h-full flex items-center">
-              <div className="text-[7vw] w-[40vw] ml-[30vw]">
+              <div className="text-[6.5vw] w-[43vw] ml-[27vw]">
                 <h1>Real Talk, Real Impact</h1>
               </div>
               <div className="w-[22vw] rounded-full overflow-hidden ml-[10vw]">
@@ -69,11 +78,11 @@ const Horizontal = () => {
                   </p>
                   <h1 className="text-[10vw] text-white -ml-[3.5vw]">20.4M</h1>
                 </div>
-                <h1 className="text-[3vw] w-[48vw] text-center -mt-[3vw] ml-[10vw]">
+                <h1 className="text-[2.7vw] w-[50vw] text-center -mt-[3vw] ml-[5vw]">
                   Real people — real lives — we have built products and
                   solutions for.
                 </h1>
-                <div className="w-[150px] rounded-full overflow-hidden absolute left-0 top-[68%]">
+                <div className="w-[150px] rounded-full overflow-hidden absolute left-0 top-[65%]">
                   <img
                     src="https://assets-global.website-files.com/659dbdfd5a080be8d3483164/65e9edafe67e88c12db2d78b_2.jpg"
                     alt=""
@@ -87,7 +96,7 @@ const Horizontal = () => {
                     className="scale-[1.2]"
                   />
                 </div>
-                <div className="w-[280px] rounded-full overflow-hidden absolute left-[20%] top-[75%]">
+                <div className="w-[280px] rounded-full overflow-hidden absolute left-[25%] top-[75%]">
                   <img
                     src="https://assets-global.website-files.com/659dbdfd5a080be8d3483164/65e9ee19cb5203ee12c21ba3_3.jpg"
                     alt=""
@@ -147,21 +156,24 @@ const Horizontal = () => {
                     className="scale-[1.2]"
                   />
                 </div>
-                <div className="w-[300px] rounded-full overflow-hidden absolute left-20 bottom-0">
+                <div
+                  id="opacityAnimTrigger"
+                  className="opacityAnim w-[300px] rounded-full overflow-hidden absolute left-20 bottom-0"
+                >
                   <img
                     src="https://assets-global.website-files.com/659dbdfd5a080be8d3483164/65e9ef723a7cfee7941b52f3_6.jpg"
                     alt=""
                     className="scale-[1.2]"
                   />
                 </div>
-                <div className="w-[80px] rounded-full overflow-hidden absolute left-[70%] top-[65%]">
+                <div className="opacityAnim w-[80px] rounded-full overflow-hidden absolute left-[70%] top-[65%]">
                   <img
                     src="https://assets-global.website-files.com/659dbdfd5a080be8d3483164/65e9ef9463d57ead8406a444_8.jpg"
                     alt=""
                     className="scale-[1.2]"
                   />
                 </div>
-                <div className="w-[370px] rounded-full overflow-hidden absolute top-0 -right-20">
+                <div className="opacityAnim w-[370px] rounded-full overflow-hidden absolute top-0 -right-20">
                   <img
                     src="https://assets-global.website-files.com/659dbdfd5a080be8d3483164/65e9efa87b272d53118849fa_9.jpg"
                     alt=""
