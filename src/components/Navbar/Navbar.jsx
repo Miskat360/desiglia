@@ -3,25 +3,37 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [overlay, setOverlay] = useState(false);
-  const navbar = useRef(null)
+  const navbar = useRef(null);
   useEffect(() => {
     var preScrollPosition = window.scrollY;
-    const navBarShowHide = ()=>{
+    const navBarShowHide = () => {
       var currentScrollPorition = window.scrollY;
-      if(preScrollPosition < currentScrollPorition){
-        navbar.current.style.top = "-100px"
-      }else{
-        navbar.current.style.top = "0"
+      if (preScrollPosition < currentScrollPorition) {
+        navbar.current.style.top = "-100px";
+      } else {
+        navbar.current.style.top = "0";
       }
-      preScrollPosition = currentScrollPorition
-    }
+      preScrollPosition = currentScrollPorition;
+    };
     window.addEventListener("scroll", navBarShowHide);
-    return window.removeEventListener("Scroll", navBarShowHide)
+    return window.removeEventListener("Scroll", navBarShowHide);
   }, []);
   return (
     <>
-      <div ref={navbar} className="w-full px-10 py-4 fixed top-0 z-[99] flex justify-between items-center transition-all">
-        <a className="w-[9.5vw] h-[7.5vh]" href="">
+      <div
+        ref={navbar}
+        className="w-full px-10 py-4 fixed top-0 z-[99] flex justify-between items-center transition-all"
+      >
+        <a
+          onMouseOver={() => {
+            setOverlay(true);
+          }}
+          onMouseLeave={() => {
+            setOverlay(false);
+          }}
+          className={`w-[9.5vw] h-[7.5vh] ${overlay && "text-white"}`}
+          href=""
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -84,7 +96,7 @@ const Navbar = () => {
               key={index}
               className={`${
                 link == "contact us" &&
-                "bg-[#F5F19C] text-black px-3 py-2 rounded"
+                "bg-[#F5F19C] hover:bg-black hover:text-white text-black px-3 py-2 rounded"
               }`}
             >
               <a
@@ -95,6 +107,7 @@ const Navbar = () => {
                 onMouseLeave={() => {
                   setOverlay(false);
                 }}
+                className={`hover:text-white`}
               >
                 {link}
               </a>

@@ -10,6 +10,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "./components/Navbar/Navbar";
 import Preloader from "./components/Preloader/Preloader";
+import Button from "./components/Button/Button";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);

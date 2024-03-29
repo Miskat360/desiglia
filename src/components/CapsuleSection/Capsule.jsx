@@ -20,11 +20,11 @@ const Capsule = ({ flexReverse, capsuleData }) => {
         }`}
       >
         <div className="flex flex-col items-center">
-          <h1 className="text-2xl font-[Machina] my-16">
+          <h1 className="text-xl font-[Machina] my-16">
             {capsuleData.headingText}
           </h1>
           {capsuleData.paraText !== "" && (
-            <p className="-mt-14 text-xs w-[17vw]">{capsuleData.paraText}</p>
+            <p className="-mt-14 text-xs w-[18vw]">{capsuleData.paraText}</p>
           )}
         </div>
         <div>

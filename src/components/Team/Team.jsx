@@ -1,6 +1,7 @@
 import React from "react";
 import Member from "./Member";
 import chairman from '../../assets/image/chairman.png'
+import Button from "../Button/Button";
 const Team = () => {
   const memberData = [
     {
@@ -60,7 +61,7 @@ const Team = () => {
   ];
   return (
     <>
-      <div data-bgColor="white" className="section w-full py-6 px-10 relative">
+      <div data-bgcolor="white" className="section w-full py-6 px-10 relative">
         <h1 className="text-[4vw] font-[Machina] text-center pb-10">
           Our Team
         </h1>
@@ -68,12 +69,7 @@ const Team = () => {
           <Member memberData={memberData} />
         </div>
         <div className="py-20 text-center">
-          <a
-            href=""
-            className="uppercase text-sm font-medium bg-[#F5F19C] py-4 px-8 border border-black"
-          >
-            meet the entire team
-          </a>
+          <Button Content="meet the entire team" className="bg-[#f5f19c] border border-black px-8 py-4 text-sm font-medium"/>
         </div>
       </div>
     </>

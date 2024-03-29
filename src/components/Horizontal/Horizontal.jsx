@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Button from "../Button/Button.jsx";
+import "./Horizontal.css";
 const Horizontal = () => {
   gsap.registerPlugin(ScrollTrigger);
   const horizontalCursor = useRef(null);
@@ -184,19 +185,19 @@ const Horizontal = () => {
             </div>
           </div>
         </div>
-        <div className="fixed w-[20vw] bottom-20 left-20">
-          <a
-            href=""
-            className="font-semibold bg-[#F5F19C] border border-black py-4 px-8 uppercase"
+        <div id="horibtn">
+          <div className="fixed w-[20vw] bottom-20 left-20">
+            <Button
+              Content="partner with us"
+              className="font-semibold bg-[#F5F19C] border border-black py-4 px-8"
+            />
+          </div>
+          <div
+            ref={horizontalCursor}
+            className="horizontalCursor fixed hidden w-10 top-0 left-0 z-[9999] -rotate-[90deg] pointer-events-none select-none"
           >
-            partner with us
-          </a>
-        </div>
-        <div
-          ref={horizontalCursor}
-          className="fixed hidden w-10 top-0 left-0 z-[9999] -rotate-[90deg] pointer-events-none select-none"
-        >
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACE0lEQVR4nO2ay0oDMRSGP6p4WVtXCoo+iFLBJ7AiPoAiLr09iBdc6cLLa0i9g4piKz6BGy97izCRQAaGoZYmJ9MJMj+czXTm5HzJSZrJGSj0vzUKLAGHwB3wlvjtzVw7MPeMEJhKQBWoARGgUhYrfV3fewbMGR+5qgI8twiyE5CkPQHTeQD0A3t/jIALSDxC20BftyDKwG0HgdmCxHYFDGUNMQzULYJyAVEmXXWHZaJB4MYimB9gM/H8hrlmMzIDWYDsW/bqWgsfG5Y+dnxDzFoGoBKpoXv2IpGaNj4iYMYXRC/w6gASSzJXFNAAenyALDo07hNEAfM+QK4DALmUQkx2+KeXNUgEjEtAVh0b9g2igGUJyGlAIEcSkEdBw/Hyq5fec8flVyXsQQLyJWh4vYW/TYG/DwlIU9Cw3o5sJXxtWW5RVMp0LM5ybbTdXPHhy1oFCMWIkElqFQpNKjBzVt6BqwIkpX8zIs0AglfGviUgnwEAKGPveW3jfdu9BOQkAADl48VqJQAAZUzXVJw1ITh88GkRMIZQlwGA1PCghQBAqj5A9HHlS44QdZ+luakc50oFz9rLAWKbDDRgWXKT2rWpVWaicpfmS6MbdUTbYqjLSAzRJek02/UMEJenM0undqp4SrV6Xh8MJFUyFaVzyyU6Ms9UQ/iEI61xU8c4NtvuT/Ny1jSH0PdmF7skLdwUInD9AgXhzfXNozLSAAAAAElFTkSuQmCC" />
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACE0lEQVR4nO2ay0oDMRSGP6p4WVtXCoo+iFLBJ7AiPoAiLr09iBdc6cLLa0i9g4piKz6BGy97izCRQAaGoZYmJ9MJMj+czXTm5HzJSZrJGSj0vzUKLAGHwB3wlvjtzVw7MPeMEJhKQBWoARGgUhYrfV3fewbMGR+5qgI8twiyE5CkPQHTeQD0A3t/jIALSDxC20BftyDKwG0HgdmCxHYFDGUNMQzULYJyAVEmXXWHZaJB4MYimB9gM/H8hrlmMzIDWYDsW/bqWgsfG5Y+dnxDzFoGoBKpoXv2IpGaNj4iYMYXRC/w6gASSzJXFNAAenyALDo07hNEAfM+QK4DALmUQkx2+KeXNUgEjEtAVh0b9g2igGUJyGlAIEcSkEdBw/Hyq5fec8flVyXsQQLyJWh4vYW/TYG/DwlIU9Cw3o5sJXxtWW5RVMp0LM5ybbTdXPHhy1oFCMWIkElqFQpNKjBzVt6BqwIkpX8zIs0AglfGviUgnwEAKGPveW3jfdu9BOQkAADl48VqJQAAZUzXVJw1ITh88GkRMIZQlwGA1PCghQBAqj5A9HHlS44QdZ+luakc50oFz9rLAWKbDDRgWXKT2rWpVWaicpfmS6MbdUTbYqjLSAzRJek02/UMEJenM0undqp4SrV6Xh8MJFUyFaVzyyU6Ms9UQ/iEI61xU8c4NtvuT/Ny1jSH0PdmF7skLdwUInD9AgXhzfXNozLSAAAAAElFTkSuQmCC" />
+          </div>
         </div>
       </div>
     </>

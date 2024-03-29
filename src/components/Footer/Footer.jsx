@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import FooterLink from "./FooterLink";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -119,9 +124,12 @@ const Footer = () => {
             <span className="ml-4">Terms of Use</span>
           </div>
           <p className="text-xs">© 2024 Signifco. All rights reserved.</p>
-          <div>
-            <span>facebook</span>
-            <span className="ml-4">linkedIn</span>
+          <div className="flex gap-4 cursor-pointer">
+            <FaLinkedin />
+            <FaGithubSquare />
+            <FaSquareXTwitter />
+            <FaInstagram />
+            <FaFacebookSquare />
           </div>
         </div>
       </div>

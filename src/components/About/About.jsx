@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Card from "./Card";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Button from '../Button/Button.jsx'
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
@@ -257,9 +257,7 @@ const About = () => {
                 <span key={index}>{letter}</span>
               ))}
           </h1>
-          <a href="" className="uppercase border border-black py-4 px-6">
-            out solutions
-          </a>
+          <Button Content="our solution" className="py-3 border border-black font-medium px-6"/>
         </div>
         <div className="basis-1/2">
           <Card cardData={cardData} />
